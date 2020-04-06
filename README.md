@@ -57,3 +57,13 @@ foo	6
 labs	0
 quux	4
 ```
+*Solution*: 
+
+### find all the words that start in "f" but end in "o" or all the words that have a single capital letter "r" in them
+
+```
+docker run \
+  -v $(pwd):/usr/local/hadoop/py \
+  -it sequenceiq/hadoop-docker:2.7.1 \
+  /usr/local/hadoop/py/py_runner.sh grep start "f" end "o" find "r" capitalized "True"
+```
